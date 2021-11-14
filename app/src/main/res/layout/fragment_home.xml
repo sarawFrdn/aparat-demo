@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".fragments.HomeFragment">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      
+      <RelativeLayout
+          android:id="@+id/rl_pager"
+          android:layout_width="match_parent"
+          android:layout_height="200dp">
+
+
+          <androidx.viewpager.widget.ViewPager
+              android:layout_width="match_parent"
+              android:layout_height="200dp"
+              android:id="@+id/pager"/>
+
+
+          <com.rd.PageIndicatorView
+              android:id="@+id/pageIndicatorView"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentBottom="true"
+              android:layout_centerHorizontal="true"
+              android:layout_marginBottom="@dimen/margin_16"
+              app:piv_animationType="scale"
+              app:piv_dynamicCount="true"
+              app:piv_interactiveAnimation="true"
+              app:piv_selectedColor="@color/purple_500"
+              app:piv_unselectedColor="@color/teal_200"
+              app:piv_viewPager="@id/pager"
+              attrs:piv_padding="12dp"
+              attrs:piv_radius="8dp" />
+
+
+      </RelativeLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_new_videos"
+            android:layout_margin="@dimen/margin_8"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/bg_corner"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_size"
+            android:text="New Videos"/>
+
+      <androidx.core.widget.NestedScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:scrollbars="horizontal"
+          android:focusable="false"
+          android:focusableInTouchMode="true">
+
+      <RelativeLayout
+          android:id="@+id/rel_new"
+          android:layout_below="@id/txt_new_videos"
+          android:layout_width="match_parent"
+          android:layout_height="144dp">
+
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recycler_new_videos"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content" />
+
+          <ProgressBar
+              android:layout_centerInParent="true"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/progressBar_new"/>
+
+      </RelativeLayout>
+      </androidx.core.widget.NestedScrollView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_best_videos"
+            android:layout_margin="@dimen/margin_8"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="@drawable/bg_corner"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_size"
+            android:text="Best Videos"/>
+
+      <androidx.core.widget.NestedScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:scrollbars="horizontal"
+          android:focusable="false"
+          android:focusableInTouchMode="true">
+          <RelativeLayout
+              android:id="@+id/rel_best"
+              android:layout_below="@id/txt_new_videos"
+              android:layout_width="match_parent"
+              android:layout_height="144dp">
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recycler_best_videos"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:scrollbars="horizontal" />
+              <ProgressBar
+                  android:layout_centerInParent="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/progressBar_best"/>
+
+          </RelativeLayout>
+
+      </androidx.core.widget.NestedScrollView>
+
+
+      <androidx.appcompat.widget.AppCompatTextView
+          android:id="@+id/txt_special_videos"
+          android:layout_width="150dp"
+          android:layout_height="60dp"
+          android:layout_marginStart="@dimen/margin_8"
+          android:layout_marginTop="@dimen/margin_8"
+          android:layout_marginEnd="@dimen/margin_8"
+          android:layout_marginBottom="@dimen/margin_8"
+          android:background="@drawable/bg_corner"
+          android:gravity="center"
+          android:text="Special Videos"
+          android:textColor="@color/white"
+          android:textSize="@dimen/title_size" />
+
+      <androidx.core.widget.NestedScrollView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:scrollbars="horizontal"
+          android:focusable="false"
+          android:focusableInTouchMode="true">
+          <RelativeLayout
+              android:id="@+id/rel_special"
+              android:layout_below="@id/txt_new_videos"
+              android:layout_width="match_parent"
+              android:layout_height="144dp">
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:id="@+id/recycler_special_videos"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:scrollbars="horizontal" />
+
+              <ProgressBar
+                  android:layout_centerInParent="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/progressBar_special"/>
+
+          </RelativeLayout>
+
+      </androidx.core.widget.NestedScrollView>
+
+  </LinearLayout>
+</androidx.core.widget.NestedScrollView>

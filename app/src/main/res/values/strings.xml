@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Aparat</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">home</string>
+    <string name="category">category</string>
+    <string name="favorite">favorite</string>
+    <string name="new_videos">new videos</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="privacy_policy">privacy policy</string>
+</resources>
